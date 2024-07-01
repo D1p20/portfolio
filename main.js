@@ -1,17 +1,24 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"
+import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyDV3BBJWkCSAGzXVKP72UDqDeZzVMFu6us",
-    authDomain: "employercounter.firebaseapp.com",
+const appSettings = {
     databaseURL: "https://employercounter-default-rtdb.firebaseio.com",
-    projectId: "employercounter",
-    storageBucket: "employercounter.appspot.com",
-    messagingSenderId: "897925729780",
-    appId: "1:897925729780:web:d123d963709cbe855ebda1",
-    measurementId: "G-ERHYBYDZ2D"
-  };
+}
 
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+const app = initializeApp(appSettings)
+const database = getDatabase(app)
+const eeDB = ref(database, "ee")
+// const firebaseConfig = {
+// apiKey: "AIzaSyDV3BBJWkCSAGzXVKP72UDqDeZzVMFu6us",
+// authDomain: "employercounter.firebaseapp.com",
+// databaseURL: "https://employercounter-default-rtdb.firebaseio.com",
+// projectId: "employercounter",
+// storageBucket: "employercounter.appspot.com",
+// messagingSenderId: "897925729780",
+// appId: "1:897925729780:web:d123d963709cbe855ebda1",
+// measurementId: "G-ERHYBYDZ2D"
+// };
+
 
   async function saveVisitorData() {
     try {
@@ -21,7 +28,7 @@
       const ipAddress = data.ip;
   
       // Save the visitor data (IP address and timestamp) to the Realtime Database.
-      const newVisitorRef = push(ref(db, 'visitors'));
+      const newVisitorRef = push(ref(db, 'ee'));
       set(newVisitorRef, {
         ip: ipAddress,
         timestamp: new Date().toISOString(),
