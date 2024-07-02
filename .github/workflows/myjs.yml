@@ -25,3 +25,6 @@ jobs:
         run: node main.js
         env:
           FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
+
+
+          
