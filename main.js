@@ -3,11 +3,9 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getDatabase, ref, push, set } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
 
 // Initialize Firebase
-const appSettings = {
-    databaseURL: "https://portfolio-f1037-default-rtdb.asia-southeast1.firebasedatabase.app",
-};
+const firebaseConfig = JSON.parse(process.env.FIREBASE_CONFIG);
 
-const app = initializeApp(appSettings);
+const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const visitorDB = ref(database, "visitor");
 
