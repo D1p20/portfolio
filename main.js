@@ -1,11 +1,13 @@
-// Import Firebase modules from the CDN (CommonJS syntax)
-const { initializeApp } = require("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
-const { getDatabase, ref, push, set } = require('https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js');
+// Import Firebase modules from the CDN
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getDatabase, ref, push, set } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
 
 // Initialize Firebase
-const firebaseConfig = JSON.parse(process.env.FIREBASE_CONFIG);
+const appSettings = {
+    databaseURL: "https://portfolio-f1037-default-rtdb.asia-southeast1.firebasedatabase.app",
+};
 
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(appSettings);
 const database = getDatabase(app);
 const visitorDB = ref(database, "visitor");
 
