@@ -158,3 +158,23 @@ p{
   max-width: 600px;
   margin: 0.5em;
 }
+
+/* Media query for 500px width */
+@media screen and (max-width: 500px) {
+  body {
+      margin: 0;
+  }
+
+  #container {
+      padding: 0.5em;
+      font-size: 0.8em;
+      max-width: 400px;
+  }
+
+  .projects{
+    
+    flex-direction:column
+
+  }
+
+}
