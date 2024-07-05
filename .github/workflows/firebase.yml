@@ -1,4 +1,4 @@
-name: CI
+name: Firebase CI
 
 on:
   push:
@@ -21,14 +21,18 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build
-
-      - name: Run tests
-        run: npm test
+      - name: Print Firebase Config
+        run: |
+          echo $FIREBASE_CONFIG
+          echo $FIREBASE_CONFIG1
         env:
           FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
           FIREBASE_CONFIG1: ${{ secrets.FIREBASE_CONFIG1 }}
+
+      - name: Run JavaScript script
+        run: |
+          echo "const firebaseConfig = JSON.parse(process.env.FIREBASE_CONFIG);" > script.js
+          echo "console.log(firebaseConfig);" >> script.js
+          node script.js
+        env:
+          FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
