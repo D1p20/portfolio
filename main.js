@@ -1,3 +1,6 @@
+console.log('FIREBASE_CONFIG:', process.env.FIREBASE_CONFIG);
+console.log('FIREBASE_CONFIG1:', process.env.FIREBASE_CONFIG1);
+
 // Import Firebase modules from the CDN
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getDatabase, ref, push, set } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
