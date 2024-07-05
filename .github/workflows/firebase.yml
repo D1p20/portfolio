@@ -21,14 +21,10 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Print Firebase Config
-        run: |
-          echo "${{ secrets.FIREBASE_CONFIG }}"
+      - name: Install dependencies
+        run: npm install
 
-      - name: Run JavaScript script
+      - name: Inject secrets and build
         run: |
-          echo "const firebaseConfig = JSON.parse('${{ secrets.FIREBASE_CONFIG }}');" > script.js
-          echo "console.log(firebaseConfig);" >> script.js
-          node script.js
-        env:
-          FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
+          echo "FIREBASE_CONFIG=${{ secrets.FIREBASE_CONFIG }}" >> .env
+          npm run build
