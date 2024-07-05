@@ -1,10 +1,10 @@
 // Import Firebase modules from the CDN
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getDatabase, ref, push, set } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
-console.log('FIREBASE_CONFIG:', process.env.FIREBASE_CONFIG);
+
 // Initialize Firebase
 const appSettings = {
-  databaseURL: process.env.FIREBASE_CONFIG, // Using environment variable
+  databaseURL: process.env.FIREBASE_CONFIG, // Using environment variable and it does not work
 };
 
 const app = initializeApp(appSettings);
