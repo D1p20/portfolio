@@ -23,15 +23,11 @@ jobs:
 
       - name: Print Firebase Config
         run: |
-          echo $FIREBASE_CONFIG
-          echo $FIREBASE_CONFIG1
-        env:
-          FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
-          FIREBASE_CONFIG1: ${{ secrets.FIREBASE_CONFIG1 }}
+          echo "${{ secrets.FIREBASE_CONFIG }}"
 
       - name: Run JavaScript script
         run: |
-          echo "const firebaseConfig = JSON.parse(process.env.FIREBASE_CONFIG);" > script.js
+          echo "const firebaseConfig = ${JSON.stringify(process.env.FIREBASE_CONFIG)};" > script.js
           echo "console.log(firebaseConfig);" >> script.js
           node script.js
         env:
