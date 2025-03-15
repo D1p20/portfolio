@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Istiak Ansary</title>
+    <style>
+        /* General Styles */
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          background-color: white;
+          color: black;
+        }
+        /* Header Styles */
+        header {
+          text-align: center;
+          padding: 20px;
+          background-color: white;
+          border-bottom: 1px solid #ccc;
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+        }
+        header h1 {
+          font-size: 2em;
+        }
+        header p {
+          margin: 5px 0;
+        }
+        header a {
+          color: blue;
+          text-decoration: none;
+        }
+        header a:hover {
+          text-decoration: underline;
+        }
+        /* Main Content */
+        main {
+          padding: 20px;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        main h2 {
+          text-align: center;
+          margin-bottom: 20px;
+          border-bottom: 2px solid black;
+          padding-bottom: 10px;
+        }
+        /* Override the original image styling */
+        main img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+          margin: 0;
+          border: none;
+          border-radius: 0;
+        }
+        main p {
+          text-align: center;
+        }
+        section {
+          margin-bottom: 20px;
+        }
+        /* Footer Styles */
+        footer {
+          text-align: center;
+          padding: 10px;
+          border-top: 1px solid #ccc;
+          font-size: 0.9em;
+          background-color: white;
+        }
+
+        /* Portfolio Layout - 1 item per row */
+        .portfolio-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          margin-top: 30px;
+        }
+
+        .portfolio-item {
+          overflow: hidden;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+          background-color: #232222;
+          padding: 15px;
+        }
+
+        .portfolio-item:hover {
+          transform: translateY(-5px);
+        }
+
+        .portfolio-item img {
+          width: 100%;
+          height: auto; /* Allow natural height */
+          object-fit: contain; /* Ensure no cropping */
+          border-radius: 8px;
+          transition: transform 0.3s ease;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 600px) {
+          header h1 {
+              font-size: 1.5em;
+          }
+          main h2 {
+              font-size: 1.2em;
+          }
+          .portfolio-item {
+              padding: 10px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Hello, I'm Istiak!</h1>
+        <p>A UX Designer focusing on accessibility and user advocacy</p>
+        <p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ansaryistiak@gmail.com" target="_blank">📧 Email Me</a>
+        </p>
+        <p>
+            <a href="https://docs.google.com/presentation/d/1XzRgEqDhfYi7LoPBrhCDZUPdHDlNYQEd16aQpDvzfOg/edit?usp=sharing" target="_blank">
+                Check out my case study about the accessible Bangla keyboard
+            </a>
+        </p>
+    </header>
+    
+    <!-- Main Content Section -->
+    <main>
+        <section>
+            <h2>My Portfolio</h2>
+            <div class="portfolio-grid">
+                <!-- Images from 0 to 21 -->
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(0).svg" alt="Portfolio item 1">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(1).svg" alt="Portfolio item 2">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(2).svg" alt="Portfolio item 3">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(3).svg" alt="Portfolio item 4">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(4).svg" alt="Portfolio item 5">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(5).svg" alt="Portfolio item 6">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(6).svg" alt="Portfolio item 7">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(7).svg" alt="Portfolio item 8">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(8).svg" alt="Portfolio item 9">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(9).svg" alt="Portfolio item 10">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(10).svg" alt="Portfolio item 11">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(11).svg" alt="Portfolio item 12">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(12).svg" alt="Portfolio item 13">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(13).svg" alt="Portfolio item 14">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(14).svg" alt="Portfolio item 15">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(15).svg" alt="Portfolio item 16">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(16).svg" alt="Portfolio item 17">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(17).svg" alt="Portfolio item 18">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(18).svg" alt="Portfolio item 19">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(19).svg" alt="Portfolio item 20">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(20).svg" alt="Portfolio item 21">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfoliointer(21).svg" alt="Portfolio item 22">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Istiak Ansary. All rights reserved.</p>
+    </footer>
+</body>
+</html>
