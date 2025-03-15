@@ -78,6 +78,7 @@
           flex-direction: column;
           gap: 30px;
           margin-top: 30px;
+          min-height: 300px; /* Ensure there's space for the loading message */
         }
 
         .portfolio-item {
@@ -115,6 +116,42 @@
           z-index: 10;
         }
         
+        /* Loading Message */
+        .loading-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 40px 0;
+          text-align: center;
+        }
+        
+        .loading-message {
+          font-size: 18px;
+          margin-bottom: 15px;
+          color: #333;
+        }
+        
+        .loading-spinner {
+          width: 40px;
+          height: 40px;
+          border: 5px solid #f3f3f3;
+          border-top: 5px solid #3498db;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+        
+        .loading-progress {
+          margin-top: 15px;
+          font-size: 14px;
+          color: #666;
+        }
+        
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        
         /* Responsive Design */
         @media (max-width: 600px) {
           header h1 {
@@ -130,6 +167,9 @@
               top: 10px;
               left: 10px;
               font-size: 12px;
+          }
+          .loading-message {
+              font-size: 16px;
           }
         }
     </style>
@@ -148,9 +188,14 @@
     <!-- Main Content Section -->
     <main>
         <section>
-            <h2>Case Study</h2>
+            <h2>My Portfolio</h2>
             <div class="portfolio-grid">
-                <!-- Images will be loaded by JavaScript -->
+                <!-- Loading message will appear here first -->
+                <div class="loading-container">
+                    <div class="loading-message">Loading Portfolio...</div>
+                    <div class="loading-spinner"></div>
+                    <div class="loading-progress">Preparing 0/22 images</div>
+                </div>
             </div>
         </section>
     </main>
@@ -165,12 +210,22 @@
             const portfolioGrid = document.querySelector('.portfolio-grid');
             const totalImages = 22; // From 0 to 21
             
-            // Clear any existing content
-            portfolioGrid.innerHTML = '';
+            // Create loading elements (already in HTML)
+            const loadingContainer = document.querySelector('.loading-container');
+            const loadingProgress = document.querySelector('.loading-progress');
             
             // Function to create and add a single portfolio item
             function addPortfolioItem(index) {
-                if (index > 21) return; // Stop when we've added all images
+                if (index > 21) {
+                    // All images loaded, remove loading message
+                    if (loadingContainer) {
+                        loadingContainer.remove();
+                    }
+                    return;
+                }
+                
+                // Update loading progress
+                loadingProgress.textContent = `Loading ${index + 1}/${totalImages} images`;
                 
                 const portfolioItem = document.createElement('div');
                 portfolioItem.className = 'portfolio-item';
@@ -188,7 +243,13 @@
                 
                 // When image loads, fade it in and load the next one
                 img.onload = function() {
+                    // If this is the first image, remove the loading indicator
+                    if (index === 0) {
+                        portfolioGrid.innerHTML = '';
+                    }
+                    
                     portfolioItem.style.opacity = '1';
+                    
                     // Load the next image after a short delay
                     setTimeout(() => {
                         addPortfolioItem(index + 1);
@@ -198,6 +259,12 @@
                 // If image fails to load, still try to load the next one
                 img.onerror = function() {
                     console.error(`Failed to load image ${index}`);
+                    
+                    // If this is the first image, remove the loading indicator
+                    if (index === 0) {
+                        portfolioGrid.innerHTML = '';
+                    }
+                    
                     setTimeout(() => {
                         addPortfolioItem(index + 1);
                     }, 200);
@@ -208,8 +275,10 @@
                 portfolioGrid.appendChild(portfolioItem);
             }
             
-            // Start loading images from index 0
-            addPortfolioItem(0);
+            // Start loading images from index 0 after a short delay
+            setTimeout(() => {
+                addPortfolioItem(0);
+            }, 800); // Show loading animation for at least 800ms
         });
     </script>
 </body>
