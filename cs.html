@@ -210,5 +210,51 @@
     <footer>
         <p>© 2025 Istiak Ansary. All rights reserved.</p>
     </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const portfolioGrid = document.querySelector('.portfolio-grid');
+        const totalImages = 22; // From 0 to 21
+        
+        // Clear any existing content
+        portfolioGrid.innerHTML = '';
+        
+        // Function to create and add a single portfolio item
+        function addPortfolioItem(index) {
+            if (index > 21) return; // Stop when we've added all images
+            
+            const portfolioItem = document.createElement('div');
+            portfolioItem.className = 'portfolio-item';
+            portfolioItem.style.opacity = '0';
+            portfolioItem.style.transition = 'opacity 0.5s ease';
+            
+            const img = document.createElement('img');
+            img.src = `images/portfoliointer(${index}).svg`;
+            img.alt = `Portfolio item ${index + 1}`;
+            
+            // When image loads, fade it in and load the next one
+            img.onload = function() {
+                portfolioItem.style.opacity = '1';
+                // Load the next image after a short delay
+                setTimeout(() => {
+                    addPortfolioItem(index + 1);
+                }, 200); // Adjust delay between image loads (in milliseconds)
+            };
+            
+            // If image fails to load, still try to load the next one
+            img.onerror = function() {
+                console.error(`Failed to load image ${index}`);
+                setTimeout(() => {
+                    addPortfolioItem(index + 1);
+                }, 200);
+            };
+            
+            portfolioItem.appendChild(img);
+            portfolioGrid.appendChild(portfolioItem);
+        }
+        
+        // Start loading images from index 0
+        addPortfolioItem(0);
+    });
+</script>
 </body>
 </html>
