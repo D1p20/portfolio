@@ -168,73 +168,87 @@
         <p>© 2025 Istiak Ansary. All rights reserved.</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const portfolioGrid = document.querySelector('.portfolio-grid');
-            const loadingMessage = document.getElementById('loading-message');
-            const totalImages = 22; // From 0 to 21
-            let loadedImages = 0;
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const portfolioGrid = document.querySelector('.portfolio-grid');
+        const loadingMessage = document.getElementById('loading-message');
+        const totalImages = 22; // From 0 to 21
+        let loadedImages = 0;
 
-            // Clear any existing content
-            portfolioGrid.innerHTML = '';
+        // Clear any existing content
+        portfolioGrid.innerHTML = '';
 
-            // Function to create and add a single portfolio item
-            function addPortfolioItem(index) {
-                if (index > 21) return; // Stop when we've added all images
-                
-                const portfolioItem = document.createElement('div');
-                portfolioItem.className = 'portfolio-item';
-                portfolioItem.style.opacity = '0';
-                portfolioItem.style.transition = 'opacity 0.5s ease';
-                
-                // Create image number indicator
-                const imageNumber = document.createElement('div');
-                imageNumber.className = 'image-number';
-                imageNumber.textContent = `${index + 1}/${totalImages}`;
-                
-                const img = document.createElement('img');
-                img.src = `images/portfoliointer(${index}).svg`;
-                img.alt = `Portfolio item ${index + 1}`;
-                
-                // When image loads, fade it in and load the next one
-                img.onload = function() {
-                    portfolioItem.style.opacity = '1';
-                    loadedImages++;
-                    
-                    // If all images are loaded, hide loading message
-                    if (loadedImages === totalImages) {
-                        loadingMessage.style.display = 'none';
-                    }
-                    
-                    // Load the next image after a short delay
-                    setTimeout(() => {
-                        addPortfolioItem(index + 1);
-                    }, 200); // Adjust delay between image loads (in milliseconds)
-                };
-                
-                // If image fails to load, still try to load the next one
-                img.onerror = function() {
-                    console.error(`Failed to load image ${index}`);
-                    loadedImages++;
-                    
-                    // If all images are loaded, hide loading message
-                    if (loadedImages === totalImages) {
-                        loadingMessage.style.display = 'none';
-                    }
-                    
-                    setTimeout(() => {
-                        addPortfolioItem(index + 1);
-                    }, 200);
-                };
-                
-                portfolioItem.appendChild(imageNumber);
-                portfolioItem.appendChild(img);
-                portfolioGrid.appendChild(portfolioItem);
+        // Function to create and add a single portfolio item
+        function addPortfolioItem(index) {
+            if (index > 21) return; // Stop when we've added all images
+            
+            const portfolioItem = document.createElement('div');
+            portfolioItem.className = 'portfolio-item';
+            portfolioItem.style.opacity = '0';
+            portfolioItem.style.transition = 'opacity 0.5s ease';
+            
+            // Create image number indicator
+            const imageNumber = document.createElement('div');
+            imageNumber.className = 'image-number';
+            imageNumber.textContent = `${index + 1}/${totalImages}`;
+            
+            const img = document.createElement('img');
+            img.src = `images/portfoliointer(${index}).svg`;
+            img.alt = `Portfolio item ${index + 1}`;
+            
+            // Create anchor tag for clickable image
+            const link = document.createElement('a');
+            
+            // Add links to image 14 and 18
+            if (index === 13) {
+                link.href = "https://www.figma.com/proto/iAcujnJzmcOhnMSTRPOTL5/SIMPLE-BANGLA-KEYBOARD?node-id=1-776&node-type=canvas&t=xEx32CgcZhITkcdW-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1";
+                link.target = "_blank";  // Open in a new tab
+            } else if (index === 17) {
+                link.href = "https://www.figma.com/proto/iAcujnJzmcOhnMSTRPOTL5/SIMPLE-BANGLA-KEYBOARD?node-id=1-1679&node-type=canvas&t=6rc93rIqbleckosp-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A1456";
+                link.target = "_blank";  // Open in a new tab
             }
             
-            // Start loading images from index 0
-            addPortfolioItem(0);
-        });
-    </script>
+            // When image loads, fade it in and load the next one
+            img.onload = function() {
+                portfolioItem.style.opacity = '1';
+                loadedImages++;
+                
+                // If all images are loaded, hide loading message
+                if (loadedImages === totalImages) {
+                    loadingMessage.style.display = 'none';
+                }
+                
+                // Load the next image after a short delay
+                setTimeout(() => {
+                    addPortfolioItem(index + 1);
+                }, 200); // Adjust delay between image loads (in milliseconds)
+            };
+            
+            // If image fails to load, still try to load the next one
+            img.onerror = function() {
+                console.error(`Failed to load image ${index}`);
+                loadedImages++;
+                
+                // If all images are loaded, hide loading message
+                if (loadedImages === totalImages) {
+                    loadingMessage.style.display = 'none';
+                }
+                
+                setTimeout(() => {
+                    addPortfolioItem(index + 1);
+                }, 200);
+            };
+            
+            link.appendChild(img);  // Wrap the image in the link tag
+            portfolioItem.appendChild(imageNumber);
+            portfolioItem.appendChild(link);
+            portfolioGrid.appendChild(portfolioItem);
+        }
+        
+        // Start loading images from index 0
+        addPortfolioItem(0);
+    });
+</script>
+
 </body>
 </html>
