@@ -132,6 +132,13 @@
               font-size: 12px;
           }
         }
+
+        /* Loading Message */
+        #loading-message {
+          text-align: center;
+          font-size: 1.5em;
+          margin-top: 50px;
+        }
     </style>
 </head>
 <body>
@@ -142,16 +149,17 @@
 			|
 			<a href="https://mail.google.com/mail/?view=cm&fs=1&to=ansaryistiak@gmail.com" target="_blank">📧 Email Me</a>
         </p>
-
     </header>
     
     <!-- Main Content Section -->
     <main>
         <section>
             <h2>Case Study</h2>
+            
             <div class="portfolio-grid">
                 <!-- Images will be loaded by JavaScript -->
             </div>
+			<div id="loading-message">Loading...</div>
         </section>
     </main>
     
@@ -163,11 +171,13 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const portfolioGrid = document.querySelector('.portfolio-grid');
+            const loadingMessage = document.getElementById('loading-message');
             const totalImages = 22; // From 0 to 21
-            
+            let loadedImages = 0;
+
             // Clear any existing content
             portfolioGrid.innerHTML = '';
-            
+
             // Function to create and add a single portfolio item
             function addPortfolioItem(index) {
                 if (index > 21) return; // Stop when we've added all images
@@ -189,6 +199,13 @@
                 // When image loads, fade it in and load the next one
                 img.onload = function() {
                     portfolioItem.style.opacity = '1';
+                    loadedImages++;
+                    
+                    // If all images are loaded, hide loading message
+                    if (loadedImages === totalImages) {
+                        loadingMessage.style.display = 'none';
+                    }
+                    
                     // Load the next image after a short delay
                     setTimeout(() => {
                         addPortfolioItem(index + 1);
@@ -198,6 +215,13 @@
                 // If image fails to load, still try to load the next one
                 img.onerror = function() {
                     console.error(`Failed to load image ${index}`);
+                    loadedImages++;
+                    
+                    // If all images are loaded, hide loading message
+                    if (loadedImages === totalImages) {
+                        loadingMessage.style.display = 'none';
+                    }
+                    
                     setTimeout(() => {
                         addPortfolioItem(index + 1);
                     }, 200);
